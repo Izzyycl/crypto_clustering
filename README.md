@@ -1,48 +1,78 @@
 # crypto_clustering
-This is a Jupyter notebook that clusters cryptocurrencies by their performance in different time periods. 
 
 
-The CSV file in the Resources folder contains price change data of cryptocurrencies in different periods.
+This project uses unsupervised learning methods (KMeans algorithm) to cluster cryptocurrencies by their performance in different time periods. The data used in the analysis is provided from a CSV file and is prepared using Pandas and the StandardScaler module from scikit learn.
 
-The steps for this challenge are broken out into the following sections:
-
-* Import the Data
-* Prepare the Data
-* Find the Best Value for k Using the Original Data
-* Cluster Cryptocurrencies with K-means Using the Original Data
-* Optimize Clusters with Principal Component Analysis
-* Find the Best Value for k Using the PCA Data
-* Cluster the Cryptocurrencies with K-means Using the PCA Data
-* Visualize and Compare the Results
+![Crypto_clustering_results.png](https://github.com/rrmangum/Crypto_Clustering/blob/main/Images/crypto_clustering_results.png?raw=true)
 
 ---
 
 ## Technologies
 
-This was developed with Anaconda, in a development environment running Python 3.7.13, which includes Pandas, and in addition sklearn with Kmeans, PCA, StandardScaler.
+This analysis uses python Python 3.9.12 and the following libraries:
+* [Pandas](https://pandas.pydata.org/) - Provides the calculating functions, and data manipulation necessary to conduct this analysis.
+* [Pathlib](https://docs.python.org/3/library/pathlib.html) - Provides the path to a CSV database.
+* [hvplot](https://hvplot.holoviz.org/user_guide/index.html) - Provides the visualizations.
+* [scikit learn](https://scikit-learn.org/stable/user_guide.html) - Provides the tools for unsupervised learning through clustering, standard scaling, and PCA
 
 ---
 
 ## Installation Guide
 
-Before running the application first install the following dependencies.
+An installation is not required for this analysis if you are only wanting to review the analysis. If you wish to alter the inputted values, follow the steps below:
+
+1. Download [Anaconda](https://www.anaconda.com/products/distribution) to your computer. 
+
+2. To install hvplot, in your terminal or gitbash enter the following command:
 
 ```python
-  conda activate dev
-  pip install -U scikit-learn
-  conda install -c pyviz hvplot
+conda install -c pyviz hvplot geoviews
 ```
 
+3. To install scikit learn, in your terminal or gitbash enter the following command:
+
+```python
+pip install -U scikit-learn
+```
+4. In your terminal or gitbash, navigate to the directory you saved the analysis files. Enter the following command:
+```python
+jupyter lab
+```
+
+---
+
+## Usage
+
+This analysis is not meant as financial advice, and is purely a review of cryptocurrency clustering according to their performance across different time periods.
 
 ---
 
 ## Contributors
 
-Sheng Gao
-sheng_gao@outlook.com
+Ryan Mangum - [LinkedIn](https://www.linkedin.com/in/ryanrmangum/) | rrmangum@gmail.com
 
 ---
 
 ## License
 
-Columbia Engineering FinTech Boot Camp
+[MIT License](https://choosealicense.com/licenses/mit/)
+
+Copyright (c) [2022] [Ryan Mangum]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
